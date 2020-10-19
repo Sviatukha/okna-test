@@ -1,0 +1,440 @@
+@font-face{
+    font-family: "DroidSans";
+    src: url(fonts/Droid\ Sans/DroidSans.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: "DroidSans";
+    src: url(fonts/Droid\ Sans/DroidSans-Bold.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "PTSans";
+    src: url(fonts/PT\ Sans/PTS55F.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: "PTSans";
+    src: url(fonts/PT\ Sans/PTS56F.ttf);
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face{
+    font-family: "PTSans";
+    src: url(fonts/PT\ Sans/PTS75F.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "PTSans";
+    src: url(fonts/PT\ Sans/PTS76F.ttf);
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "PTSansCaption";
+    src: url(fonts/PT\ Sans\ Caption/PTC55F);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face{
+    font-family: "PTSansCaption";
+    src: url(fonts/PT\ Sans\ Caption/PTC75F);
+    font-style: normal;
+    font-weight: bold;
+}
+
+body{
+    min-width: 1100px;
+    min-width: 700px;
+    background: url(img/Noise.png);
+}
+.container {
+    width:1000px ;
+      margin: 0 auto;
+}
+.box{
+    background-image: linear-gradient(to bottom, #ffffff, #dddddd);
+    box-shadow: 0 2px 2px 0px rgba(0,0,0,.3);
+    border-radius: 5px;
+}
+
+
+/*HEDER*/
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    color: #808080;
+    padding:20px 20px 10px 20px;
+}
+.logo-block {      
+    
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+}
+.slogan {
+    display: flex;
+    font-family: "PTSans";
+    font-size: 18px;
+        flex-direction: column-reverse;
+}
+.slogan p {    
+    margin-bottom: 5px;    
+}
+.contacts-block{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 355px;
+    
+}
+.telephone{
+    font-size: 20px;
+    font-family:"PTSans" ;
+    font-weight: bold;
+    margin:0 100px 0 0;
+}
+.work-time {
+    margin:5px 0 0 0;
+    font-family: "PTSans";
+    font-style: italic;
+    font-size: 14px;
+}
+.header-nav{
+    list-style: none;    
+    width: 85px;
+    margin: 5px 0 0 0;
+}
+.header-nav li {
+    display: inline-block;
+    margin-right: 5px;
+}
+.header-nav a {   
+    display: block; 
+width: 20px;
+height: 20px;
+background-image: url(img/spritesheet.png);
+}
+.home {
+    background-position: 5 -5px;
+}
+.tree{
+    background-position:  -5px -24px;
+}
+.latter{
+    background-position: -31px 0;
+}
+
+
+/*HEADER MENU*/
+.header-menu{   
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.menu-block {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    }
+.menu-block li{
+    display: inline-block;
+    width: 130px;
+    border-right: 1px solid #d8d8d8;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+.menu-block a{
+    font-family: "PTSans";
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #a7a7a7;
+    font-size: 14px;
+    font-weight: bold;
+}
+.serch-form {
+margin: 7px 10px 0 0 ;
+position: relative;
+}
+.serch-form .serch {
+    width: 165px;
+    height: 20px;
+    border: none;
+    background-image: linear-gradient(to top, #ffffff, #ececec);
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0px rgba(0,0,0,.3) inset;
+    padding-left: 10px;
+    font-family: "PTSans";
+    font-style: italic;
+    
+}
+.serch-form .btn {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-image: url(img/spritesheet.png);
+    display: block;
+    top:0;
+    right: 0;
+    border: none;
+    background-position: -62px 0px;
+    margin-top: 2px;
+}
+.menu-block li:hover{
+    background-image: linear-gradient(to top, #ffffff, #ececec);
+    }
+.menu-block li:hover a{
+    color: black;
+}
+.menu-block .drop-list{
+    transform: scaleY(0);
+    transform-origin: top;
+    padding: 0;
+    position: absolute;
+    width: 165px;
+    height: 115px;
+    top: 38px;
+    left: 120px;
+    background-image: none;
+    background-color: #e7e7e7;
+    transition:  .5s;
+    z-index: 2;
+}
+.drop-list li{
+    display: block;
+    border: none;
+    width: 165px;
+}
+.services:hover .drop-list{
+    transform: scale(1);  
+    text-align: center;  
+}
+.drop-list:last-child {
+    border: none;
+}
+.drop-list a{
+    text-transform: none;
+    font-weight: normal;
+}
+.drop-list li:hover{
+    background-color: inherit;
+    background-image: none;   
+}
+.drop-list li:hover a {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    padding: 2px 20px;
+}
+
+
+/* --SLIDER--*/
+.slider-block{
+   display: flex;
+    height: 315px;
+   vertical-align: middle;
+   
+}
+.slider {
+    display: flex;
+    width: 985px;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+}
+.image {
+width: 16.5%;
+height: 300px;
+}
+.slider .active {
+    width: 495px;
+    height: 300px;    
+    background-position: center;
+}
+.img-4{
+    background: url(img/vilage.jpg);
+    background-position:-55px 0;
+}
+.img-3{
+    background: url(img/classic.jpg);
+    background-position: center;
+}
+.img-2{
+    background: url(img/skyscraper.jpg);
+    background-position: -100px;
+}
+.img-1{
+    background: url(img/flat.jpg);
+    background-position: -80px;
+}
+.next-btn-box {
+    width: 55px;
+    height: 20px;
+    background-color: #dddddd;
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+    border-radius: 3px 0 0 0 ;
+}
+.next-btn {
+    width: 15px;
+    height: 15px;
+    background-image: url(img/spritesheet.png);
+    display: block;
+    background-position: -36px -29px;
+    margin: 7px 10px;
+}
+.number {
+    position: absolute;
+    bottom: 1px;
+    right: 8px;
+    z-index: 2;
+    display: none;
+    font-size: 12px;
+    font-family: "PTSans";
+    font-weight: bold;
+    color:#808080;
+}
+.active>.number{
+    display: block;
+}
+
+
+/* MAIN MENU */
+.menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+}
+.menu li:not(.left-menu){
+    width: 215px;
+    height: 25px; 
+    border-radius: 2px;         
+}
+.menu li:not(.left-menu):hover{
+    background-image: linear-gradient(to top, #ffffff, #ececec);
+    }
+.left-menu ul{
+    list-style: none;
+    padding: 0;
+
+}
+.menu>li:not(.left-menu){
+    margin-top: 135px;
+    text-align: center;
+}
+.left-menu li {
+    margin-bottom: 2px;
+    max-height: 25px;
+}
+.left-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "DroidSans";
+    font-weight: bold;
+    font-size: 13px;
+    color: #a7a7a7;
+    margin-left: 15px;
+    line-height: 25px;
+}
+.menu>li:not(.left-menu) a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "PTSans";
+    font-size: 14px;
+    color: #a7a7a7;
+    line-height: 25px;
+    position: relative;
+}
+.menu>li:not(.left-menu)::before{
+content: "";
+display: block;
+width: 215px;
+height: 130px;
+background-color: white;
+position: absolute;
+transform: translateY(-135px);
+}
+.menu>li:not(.left-menu)::after{
+    content: "";
+display: block;
+width: 209px;
+height: 124px;
+position: absolute;
+transform: translateX( 3px)
+translateY(-157px);
+}
+.menu>li:nth-child(2)::after{
+    background: url(img/deploy.jpg) no-repeat;
+}
+.menu>li:nth-child(3)::after{
+    background: url(img/otkos.jpg) no-repeat;
+}
+.menu>li:nth-child(4)::after{
+    background: url(img/lodgia.jpg) no-repeat;
+}
+
+
+/*LINE*/
+.line{
+    height: 3px;
+    background-image: linear-gradient(to top, #ffffff, #a8a8a8);
+}
+
+
+/*FOOTER MENU*/
+.footer-menu {
+    list-style: none;
+    max-height: 25px;
+    padding: 0;
+    margin: 15px 0 0 0 ;
+}
+.footer-menu li{
+    display: inline-block;
+    border-right: 1px solid #d8d8d8;
+    text-align: center;
+    line-height: 25px;
+    padding: 0 5px;
+}
+.footer-menu a {
+    text-decoration: none;
+    color: black;
+    font-family: "PTSans";
+    font-size: 12px;
+    margin: 0 13px;
+}
+.footer-menu li:last-child{
+    border: none;
+    padding: 0;
+    vertical-align: text-bottom;
+}
+.footer-menu .youtube{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(img/spritesheet.png);
+    background-position: -62px -27px;
+    margin:0 2px;
+}
+.footer-menu li:hover {
+    background-image: linear-gradient(to top, #ffffff, #ececec);
+}
+.left{
+    float: left;
+}
+.right {
+    float: right;
+}
+.footer span {
+    font-size: 12px;
+    font-family: "PTSans";
+    color: #a7a7a7;
+    margin: 5px;
+}
