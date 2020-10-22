@@ -49,7 +49,7 @@
 
 body{
     
-    min-width: 480px;
+    min-width: 400px;
     background: url(img/Noise.png);
 }
 .main {
@@ -397,7 +397,7 @@ top: -132px;
 /*FOOTER MENU*/
 .footer-menu {
     list-style: none;
-    max-height: 25px;
+    
     padding: 0;
     margin: 15px 0 0 0 ;
     display: flex;
@@ -448,13 +448,21 @@ top: -132px;
         display: none;
     }
     .active {
-        display: block;
-        width: 470px;
+        display: block;      
+        background-size: cover;
     }
     .slider-block{ 
-        width: 480px;
+        width: 410px;
     }
+    .slider{
+        width: 400px;
+    }
+
     .logo-block {
         flex-direction: column;
     }
+}
+.menu {
+    flex-direction: column;
+    align-items: center;
 }
