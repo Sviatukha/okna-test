@@ -48,18 +48,19 @@
 }
 
 body{
-    min-width: 1100px;
-    min-width: 700px;
+    
+    min-width: 480px;
     background: url(img/Noise.png);
 }
-.container {
-    width:1000px ;
+.main {
+    max-width:1000px ;
       margin: 0 auto;
 }
 .box{
     background-image: linear-gradient(to bottom, #ffffff, #dddddd);
     box-shadow: 0 2px 2px 0px rgba(0,0,0,.3);
     border-radius: 5px;
+    flex-wrap: wrap;
 }
 
 
@@ -69,12 +70,16 @@ body{
     justify-content: space-between;
     color: #808080;
     padding:20px 20px 10px 20px;
+    flex-wrap: wrap;
+    flex-flow: wrap;
 }
 .logo-block {      
-    
-      width: 500px;
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    display: block;
+    margin-right: 20px;
 }
 .slogan {
     display: flex;
@@ -89,14 +94,15 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 355px;
+    width: 300px;
     
 }
-.telephone{
+.telephone, .telephone a{
     font-size: 20px;
     font-family:"PTSans" ;
     font-weight: bold;
-    margin:0 100px 0 0;
+    margin:0 30px 0 0;
+    color: #808080;
 }
 .work-time {
     margin:5px 0 0 0;
@@ -108,13 +114,15 @@ body{
     list-style: none;    
     width: 85px;
     margin: 5px 0 0 0;
+    display: flex;
 }
 .header-nav li {
-    display: inline-block;
+    display: block;
+    cursor: pointer;
     margin-right: 5px;
 }
 .header-nav a {   
-    display: block; 
+ display: block; 
 width: 20px;
 height: 20px;
 background-image: url(img/spritesheet.png);
@@ -138,17 +146,17 @@ background-image: url(img/spritesheet.png);
 }
 .menu-block {
     list-style: none;
-    padding: 0;
-    margin: 0;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     }
 .menu-block li{
-    display: inline-block;
+    display: block;
     width: 130px;
     border-right: 1px solid #d8d8d8;
     text-align: center;
     padding: 10px 0;
-    
+    cursor: pointer;
 }
 .menu-block a{
     font-family: "PTSans";
@@ -239,7 +247,7 @@ position: relative;
    display: flex;
     height: 315px;
    vertical-align: middle;
-   
+   margin-bottom: 15px;
 }
 .slider {
     display: flex;
@@ -289,6 +297,7 @@ height: 300px;
     display: block;
     background-position: -36px -29px;
     margin: 7px 10px;
+    cursor: pointer;
 }
 .number {
     position: absolute;
@@ -312,11 +321,14 @@ height: 300px;
     list-style: none;
     justify-content: space-between;
     padding: 0;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 .menu li:not(.left-menu){
     width: 215px;
     height: 25px; 
-    border-radius: 2px;         
+    border-radius: 2px;  
+    cursor: pointer;       
 }
 .menu li:not(.left-menu):hover{
     background-image: linear-gradient(to top, #ffffff, #ececec);
@@ -333,6 +345,7 @@ height: 300px;
 .left-menu li {
     margin-bottom: 2px;
     max-height: 25px;
+    cursor: pointer;
 }
 .left-menu a{
     text-decoration: none;
@@ -352,34 +365,26 @@ height: 300px;
     color: #a7a7a7;
     line-height: 25px;
     position: relative;
+    width: 100%;
+    display: block;
 }
 .menu>li:not(.left-menu)::before{
 content: "";
 display: block;
 width: 215px;
 height: 130px;
-background-color: white;
+background-color:white;
 position: absolute;
 transform: translateY(-135px);
 }
-.menu>li:not(.left-menu)::after{
-    content: "";
-display: block;
+.menu>li:not(.left-menu) a img{
 width: 209px;
 height: 124px;
 position: absolute;
-transform: translateX( 3px)
-translateY(-157px);
+left: 3px;
+top: -132px;
 }
-.menu>li:nth-child(2)::after{
-    background: url(img/deploy.jpg) no-repeat;
-}
-.menu>li:nth-child(3)::after{
-    background: url(img/otkos.jpg) no-repeat;
-}
-.menu>li:nth-child(4)::after{
-    background: url(img/lodgia.jpg) no-repeat;
-}
+
 
 
 /*LINE*/
@@ -395,9 +400,10 @@ translateY(-157px);
     max-height: 25px;
     padding: 0;
     margin: 15px 0 0 0 ;
+    display: flex;
 }
 .footer-menu li{
-    display: inline-block;
+    display:block;
     border-right: 1px solid #d8d8d8;
     text-align: center;
     line-height: 25px;
@@ -426,15 +432,29 @@ translateY(-157px);
 .footer-menu li:hover {
     background-image: linear-gradient(to top, #ffffff, #ececec);
 }
-.left{
-    float: left;
-}
-.right {
-    float: right;
+.bottom-text{
+    display: flex;
+    justify-content: space-between;
 }
 .footer span {
     font-size: 12px;
     font-family: "PTSans";
     color: #a7a7a7;
     margin: 5px;
+}
+/*--ADAPT--*/
+@media screen and (max-width: 520px) {
+    .image {
+        display: none;
+    }
+    .active {
+        display: block;
+        width: 470px;
+    }
+    .slider-block{ 
+        width: 480px;
+    }
+    .logo-block {
+        flex-direction: column;
+    }
 }

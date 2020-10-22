@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
+  
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
         <title>TestOkna</title>
     </head>
-    <body>
-        <div class="page-header container">
+  
+ <body>
+    <div class="main">
+        <div class="page-header">
             <div class="logo-block">
-                <div class="logo">
+                <a class="logo" href="#">
                     <img class="logo" src="img/Logo.png" alt="Окна Сервис">                   
-                </div> 
+                </a> 
                 <div class="slogan">
                     <p>Сервисные услуги для оконных компаний</p>
                 </div>    
             </div>
             <div class="contacts-block">
-                <p class="telephone">Тел.:(812)495-54-40</p>
+                <p class="telephone">Тел.:<a href="tel:(812)495-54-40">(812)495-54-40</a></p>
                 <p class="work-time">Пн-Пт, с 10:00 до 19:00</p>
                 <ul class="header-nav">
                     <li><a class="home" href="#"></a></li>
@@ -25,7 +30,7 @@
                 </ul>
             </div>
         </div>
-        <div class="header-menu container box">
+        <div class="header-menu box">
             <ul class="menu-block">
                 <li><a href="#">о компании</a></li>
                 <li class="services"><a href="#">услуги</a>
@@ -47,7 +52,7 @@
               </form>
             </div>
         </div>
-        <div class="slider-block container box">
+        <div class="slider-block box">
             <div class="slider">
               <div class="image img-4"><div class="number">1/4</div></div>
               <div class="image img-3"><div class="number">1/3</div></div>
@@ -59,7 +64,7 @@
             </div>
             
         </div>
-        <div class="main-menu container">
+        <div class="main-menu">
             <ul class="menu">
                 <li class="left-menu">
                     <ul >
@@ -71,13 +76,18 @@
                         <li class="box"><a href="#">личный кабинет</a></li>
                     </ul>
                 </li>
-                <li class="box"><a href="#">монтаж окон</a></li>
-                <li class="box"><a href="#">Отделка откосов</a></li>
-                <li class="box"><a href="#">Отделка лоджий</a></li>
+                <li class="box"><a href="#">
+                   <span> монтаж окон</span>
+                   <img src="img/deploy.jpg" alt="deploy"></a></li>
+                <li class="box"><a href="#">
+                    <span>Отделка откосов</span>
+                    <img src="img/otkos.jpg" alt="otkos"></a></li>
+                <li class="box"><a href="#"><span>Отделка лоджий</span>
+                    <img src="img/lodgia.jpg" alt="lodgia"></a></li>
             </ul>
         </div>
-        <div class="line container"></div>
-        <div class="footer container">
+        <div class="line"></div>
+        <div class="footer">
             <ul class="footer-menu  box">
                 <li><a href="#">Условия использования сайта</a></li>
                 <li><a href="#">Политика кониденциальности</a></li>
@@ -88,10 +98,13 @@
                 <li><a href="#">Помощь</a></li>
                 <li><a href="#" class="youtube"></a></li>
             </ul> 
-            <span class="left">&#169 &#171Окна сервис&#187 2012. Все права защищены</span>
-            <span class="right">Дизайн и разработка - ЧеСтар Studio</span>   
+            <div class="bottom-text">
+              <span class="left">&#169 &#171Окна сервис&#187 2012. Все права защищены</span>
+              <span class="right">Дизайн и разработка - ЧеСтар Studio</span>   
+            </div>
         </div>
 
         <script src="script.js"></script>
-    </body>
+    </div>    
+</body>
 </html>
