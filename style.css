@@ -461,8 +461,8 @@ top: -132px;
     .logo-block {
         flex-direction: column;
     }
-}
-.menu {
-    flex-direction: column;
-    align-items: center;
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 }
